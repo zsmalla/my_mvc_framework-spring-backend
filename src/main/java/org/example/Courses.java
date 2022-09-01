@@ -10,21 +10,17 @@ public class Courses {
     }
     // (학점수 * 교과목 평점)의 합계
     public double multiplyCreditAndCourseGrade(){
-        double multipliedCreditAndCourseGrade = 0;
 
-        for (Course course : courses){
-            multipliedCreditAndCourseGrade += course.multiplyCreditAndCourseGrade();
-        }
-
-        return multipliedCreditAndCourseGrade;
+        return courses.stream()
+                .mapToDouble(Course::multiplyCreditAndCourseGrade)
+                .sum();
     }
 
     public int calculateTotalCompletedCredit(){
-        int totalCompletedCredit = courses.stream()
+
+        return courses.stream()
                 .mapToInt(Course::getCredit)
                 .sum();
-
-        return totalCompletedCredit;
     }
 
 }
