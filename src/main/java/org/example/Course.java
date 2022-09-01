@@ -17,6 +17,10 @@ public class Course {
         return credit;
     }
 
+    public double multiplyCreditAndCourseGrade(){   // Course 객체 내부에서 연산 수행(객체 작업 위임)하여 응집도 향상
+        return credit * getGradeToNumber();
+    }
+
     public double getGradeToNumber() {
         double grade = 0;
         switch (this.grade) {
