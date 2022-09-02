@@ -4,8 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64654156-31a3-4e70-ba00-11739fdbf543" name="Changes" comment="학점 계산기 : 일급 컬렉션(Courses) 리펙토링&#10;&#10;일급 컬렉션은 컬렉션 하나만을 담당하는 클래스&#10;다른 컬렉션 필드가 포함되면 안된다.">
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Courses.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Courses.java" afterDir="false" />
+    <list default="true" id="64654156-31a3-4e70-ba00-11739fdbf543" name="Changes" comment="학점 계산기 : stream api 활용&#10;&#10;stream api를 활용하여 메서드를 깔끔하게">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ArithmeticOperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/calculator/ArithmeticOperator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/calculator/Calculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PasswordGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/calculator/PasswordGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PasswordValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/calculator/PasswordValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/RandomPasswordGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/calculator/RandomPasswordGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/calculator/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/calculate/AdditionOperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/calculator/calculate/AdditionOperator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/calculate/DivisionOperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/calculator/calculate/DivisionOperator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/calculate/MultiplicationOperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/calculator/calculate/MultiplicationOperator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/calculate/NewArithmeticOperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/calculator/calculate/NewArithmeticOperator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/calculate/PositiveNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/calculator/calculate/PositiveNumber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/calculate/SubtractionOperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/calculator/calculate/SubtractionOperator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/CalculatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/calculator/CalculatorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/CorrectFixedPasswordGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/calculator/CorrectFixedPasswordGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/PasswordValidatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/calculator/PasswordValidatorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/UserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/calculator/UserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/WrongFixedPasswordGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/calculator/WrongFixedPasswordGenerator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +83,7 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.GradeCalculatorTest.calculateGradeTest">
+  <component name="RunManager" selected="JUnit.GradeCalculatorTest">
     <configuration name="CalculatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="oop-practice.test" />
       <extension name="coverage">
@@ -75,41 +92,9 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.CalculatorTest" />
+      <option name="PACKAGE_NAME" value="org.example.calculator" />
+      <option name="MAIN_CLASS_NAME" value="org.example.calculator.CalculatorTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CalculatorTest.calculateExceptionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="oop-practice.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.CalculatorTest" />
-      <option name="METHOD_NAME" value="calculateExceptionTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CalculatorTest.calculateTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="oop-practice.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.calculate.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.CalculatorTest" />
-      <option name="METHOD_NAME" value="calculateTest(int,java.lang.String,int,int)" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -118,12 +103,12 @@
       <module name="oop-practice.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.*" />
+          <option name="PATTERN" value="org.example.calculator.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.GradeCalculatorTest" />
+      <option name="PACKAGE_NAME" value="org.example.gradecalculator" />
+      <option name="MAIN_CLASS_NAME" value="org.example.gradecalculator.GradeCalculatorTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -133,25 +118,55 @@
       <module name="oop-practice.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.*" />
+          <option name="PATTERN" value="org.example.calculator.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.GradeCalculatorTest" />
+      <option name="PACKAGE_NAME" value="org.example.gradecalculator" />
+      <option name="MAIN_CLASS_NAME" value="org.example.gradecalculator.GradeCalculatorTest" />
       <option name="METHOD_NAME" value="calculateGradeTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PasswordValidatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="oop-practice.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.calculator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.calculator" />
+      <option name="MAIN_CLASS_NAME" value="org.example.calculator.PasswordValidatorTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="oop-practice.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.calculator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.calculator" />
+      <option name="MAIN_CLASS_NAME" value="org.example.calculator.UserTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.GradeCalculatorTest.calculateGradeTest" />
         <item itemvalue="JUnit.GradeCalculatorTest" />
+        <item itemvalue="JUnit.UserTest" />
+        <item itemvalue="JUnit.PasswordValidatorTest" />
         <item itemvalue="JUnit.CalculatorTest" />
-        <item itemvalue="JUnit.CalculatorTest.calculateExceptionTest" />
-        <item itemvalue="JUnit.CalculatorTest.calculateTest" />
+        <item itemvalue="JUnit.GradeCalculatorTest.calculateGradeTest" />
       </list>
     </recent_temporary>
   </component>
@@ -165,7 +180,8 @@
       <updated>1661320133009</updated>
       <workItem from="1661320135234" duration="11441000" />
       <workItem from="1661404865190" duration="4052000" />
-      <workItem from="1662037899632" duration="4275000" />
+      <workItem from="1662037899632" duration="4641000" />
+      <workItem from="1662106937671" duration="1511000" />
     </task>
     <task id="LOCAL-00002" summary="테스트코드 실습">
       <created>1661324600705</created>
@@ -216,7 +232,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662042052921</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="학점 계산기 : stream api 활용&#10;&#10;stream api를 활용하여 메서드를 깔끔하게">
+      <created>1662042239354</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1662042239354</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,7 +263,8 @@
     <MESSAGE value="학점 계산기 : TDD방식 구현" />
     <MESSAGE value="학점 계산기 : 학점수*교과목평점 계산 객체 위임" />
     <MESSAGE value="학점 계산기 : 일급 컬렉션(Courses) 리펙토링&#10;&#10;일급 컬렉션은 컬렉션 하나만을 담당하는 클래스&#10;다른 컬렉션 필드가 포함되면 안된다." />
-    <option name="LAST_COMMIT_MESSAGE" value="학점 계산기 : 일급 컬렉션(Courses) 리펙토링&#10;&#10;일급 컬렉션은 컬렉션 하나만을 담당하는 클래스&#10;다른 컬렉션 필드가 포함되면 안된다." />
+    <MESSAGE value="학점 계산기 : stream api 활용&#10;&#10;stream api를 활용하여 메서드를 깔끔하게" />
+    <option name="LAST_COMMIT_MESSAGE" value="학점 계산기 : stream api 활용&#10;&#10;stream api를 활용하여 메서드를 깔끔하게" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
